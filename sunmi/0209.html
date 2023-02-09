@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var low = 0;
+        var high = 0;
+        var card = 0;
+
+        while(true){
+            let count = 1;
+            let low = 0;
+            let high = 99;
+            let card = Math.floor(Math.random()*100);
+            let number = 0;
+            alert("숫자를 결정하였습니다!");
+            alert(card)
+            
+            while(true){
+                alert(low + "~" + high)
+                alert(count + "번째 시도입니다")
+                number = prompt("숫자를 입력해주세요!", low + "~" + high + "까지만 써라")
+            
+
+            if( number > card){
+                alert("더 낮게")
+                high = number-1
+                count++
+            }
+
+            else if(number < card){
+                alert("더 높게")
+                low = number+1
+                count++
+            }
+
+            else if(number == card){
+            alert("정답입니다. 짝짝짝")
+            break;
+            }
+            
+            }
+            break;
+        }
+        
+    
+
+
+    </script>
+</body>
+</html>
