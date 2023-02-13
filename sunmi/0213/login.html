@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="logingptcss.css">
+    
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>DIGI Campus</h1>
+      <div class="tabs">
+        <div class="tab username-tab active-tab">아이디 로그인</div>
+        <div class="tab email-tab">이메일 로그인</div>
+      </div>
+      <form class="username-form active-form">
+        <input type="text" placeholder="아이디" class = "id1">
+        <input type="password" placeholder="비밀번호" class = "pw1">
+        <div class = "status-container">
+            <label for save><input type = "checkbox" name = "save" checked>아이디 저장</label>
+            <label for stay><input type = "checkbox" name = "stay" unchecked>로그인 상태 유지</label>
+        </div>
+        <button type="button" class ="login-btn1" disabled>로그인</button>
+        <div class = "find_join">
+            <ul class = "find_join">
+                <li>아이디찾기</li>
+                <li>비밀번호찾기</li>
+                <li>회원가입</li>
+            </ul>
+        </div>
+      </form>
+      <form class="email-form">
+        <input type="email" placeholder="이메일" class = "id">
+        <input type="password" placeholder="비밀번호"  class = "pw">
+        <div class = "status-container">
+            <label for save><input type = "checkbox" name = "save" checked>아이디 저장</label>
+            <label for stay><input type = "checkbox" name = "stay" unchecked>로그인 상태 유지</label>
+        </div>
+        <button type="button" class = "login-btn" disabled>로그인</button>
+        <div class = "find_join">
+            <ul class = "find_join">
+                <li>아이디찾기</li>
+                <li>비밀번호찾기</li>
+                <li>회원가입</li>
+            </ul>
+        </div>
+      </form>
+    </div>
+    <script src = "logjs2.js"></script>
+    <script>
+      const tabs = document.querySelectorAll(".tab");
+      const usernameForm = document.querySelector(".username-form");
+      const emailForm = document.querySelector(".email-form");
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", function() {
+          if (tab.classList.contains("username-tab")) {
+            emailForm.style.display = "none";
+            usernameForm.style.display = "flex";
+            usernameForm.classList.add("active-form");
+            emailForm.classList.remove("active-form");
+            tab.classList.add("active-tab");
+            document.querySelector(".email-tab").classList.remove("active-tab");
+          } else if (tab.classList.contains("email-tab")) {
+            usernameForm.style.display = "none";
+            emailForm.style.display = "flex";
+            emailForm.classList.add("active-form");
+            usernameForm.classList.remove("active-form");
+            tab.classList.add("active-tab");
+            document.querySelector(".username-tab").classList.remove("active-tab");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

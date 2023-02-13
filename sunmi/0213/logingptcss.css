@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .login-container {
+    width: 400px;
+    margin: 100px auto;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 50px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 0.8em;
+  }
+  
+  .active-tab {
+    background-color: gray;
+    font-size: 0.8em;
+    color: white;
+  }
+  
+  form {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .active-form {
+    display: flex;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+  
+  button[type="button"] {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    /* background-color: gray;
+    color: white; */
+  }
+  
+  .status-container {
+    color: grey;
+    margin-bottom: 10px;
+    display: felx;
+    justify-content: space-between;
+  }
+
+  .find_join{
+    padding-left: 0;
+    color: grey;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .find_join > li {
+    float: left;
+    font-size: 0.8em;
+  }
+
+ label {
+    font-size: 0.8em;
+ }
