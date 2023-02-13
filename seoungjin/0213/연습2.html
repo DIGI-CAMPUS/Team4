@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .falling-box {
+        position: absolute;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const body = document.querySelector("body");
+      const createFallingBox = () => {
+        const box = document.createElement("div");
+        box.innerHTML = "유채리";
+        box.classList.add("falling-box");
+        box.style.top = `${Math.floor(Math.random() * -100)}px`;
+        box.style.left = `${Math.floor(Math.random() * window.innerWidth)}px`;
+        box.style.fontSize = `${Math.floor(Math.random() * 30 + 10)}px`;
+        body.appendChild(box);
+
+        let fallingSpeed = Math.floor(Math.random() * 10 + 5);
+        const intervalId = setInterval(() => {
+          const currentTop = parseInt(box.style.top);
+          if (currentTop > window.innerHeight) {
+            clearInterval(intervalId);
+            box.remove();
+            return;
+          }
+          box.style.top = `${currentTop + fallingSpeed}px`;
+        }, 50);
+      };
+
+      setInterval(createFallingBox, 500);
+    </script>
+  </body>
+</html>
