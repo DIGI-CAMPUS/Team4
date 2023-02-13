@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문-4(사용자 입력 이용)</title>
+</head>
+<body>
+  <!-- 
+    <script>
+        //사용자로부터 입력받는 부분 prompt는 문자열로 인식됨.
+        let data = prompt("어디까지 숫자를 출력할까요?", "숫자입력");
+        //string -> number
+        data = parseInt(data);
+        
+        for(let i=1; i<=data; i++){ //초기값 조건값 증감실행문
+            document.write(i + "<br>");
+        }
+    </script> -->
+    
+    
+    <!-- <script>
+      //사용자로부터 입력받는 부분
+      var dan = prompt("몇 단을 출력할까요?");
+      //string -> number
+      dan = parseInt(dan);
+      
+      for(var i=1; i<=9; i++){
+          document.write(dan + "*" + i + "=" + (dan*i) +"<br>");
+      }
+  </script> -->
+   <!-- <script>
+    //사용자로부터 입력받는 부분
+    var dan = prompt("몇 단을 출력할까요?");
+    //string -> number
+    dan = parseInt(dan);
+    var i=1;
+    while( i<=9 ){
+      document.write(dan + "X" + i + "=" + (dan*i) +"<br>");
+      i++;
+    }
+  </script> -->
+<!--   <script>
+    let num = 1;
+    while(num <= 9999){
+    console.log(num);
+    num++;
+    }
+
+
+    do{
+    console.log("무조건");
+    console.log("한 번은 실행");
+    }
+    while(false);
+  </script> -->
+
+ <!--  <script>
+    //1~100까지의 합계
+    var sum = 0;  //누적할 값
+    var i = 1;
+    //while문은 초기값, 조건식, 증감식이 따로 떨어져 있으므로 for문에 비하여 
+    //반복횟수를 가진다면, 가독성이 떨어진다.
+    //하여, while문은 무한루프 전용으로 사용을 한다.
+    //아울러, while문은 조건식이 앞에 있기 때문에 false라면 한 번도 수행을 안할 수가 있다.
+    while(i<=100){
+        sum += i;  //복합대입연산자를 이용하여 값을 누적하고 있다.
+        document.write(sum + ", " + i + "<br/>");
+        i++;
+    }
+    document.write("1~" + (i-1) + "까지의 합" + sum);
+</script>  -->
+
+<!-- <script>
+  //1~100까지의 합계
+  var sum = 0;  //누적할 값
+  var i = 1;
+  //do-while문은 while문의 파생된 것으로 초기값, 조건식, 증감식이 따로 떨어져 있으므로 
+  //for문에 비하여 반복횟수를 가지면 오히려 가독성이 떨어진다.
+  //하여, do-while문은 사용자에게 의사를 먼저 한번 물어보고 결정하는 
+  //프로그램 전용으로 사용을 한다.
+  //do-while문은 최소 1번은 실행한다는게 while문과의 차이점이다.(조건식이 뒤에)        
+  do{            
+      sum += i;  //복합대입연산자를 이용하여 값을 누적하고 있다.
+      document.write(sum + ", " + i + "<br/>");
+      i++;            
+  }while(i<=100)
+  document.write("1~" + (i-1) + "까지의 합" + sum);
+</script>
+   -->
+  
+   <!-- 
+   <script>
+    var inputString = null;
+    alert("메시지를 입력하세요");
+    alert("프로그램을 종료하려면 q를 입력하세요.");
+    //최소 한번은 무조건 실행된다.사용자의 의도를 물어보는 프로그램에 
+    //사용하면 될 것이다.
+    do{
+        inputString = prompt("메시지를 입력하세요.");
+        document.write(inputString + "<br/>");
+    }while(!(inputString == "q"));  //q를 입력하면 true가 되어 루프를 계속진행하기 때문에
+    //!(논리부정연산자)를 사용하여 false바꾸고 있다.
+
+    document.write("프로그램 종료!!");
+</script> -->
+<!--   <script>
+  let food = "melon";
+  switch (food) {
+    case "melon":
+      console.log("fruit");
+      break;
+    case "apple":
+      console.log("fruit");
+      break;
+    case "banana":
+      console.log("fruit");
+      break;
+    case "carrot":
+      console.log("vegetable");
+      break;
+    default:
+      console.log("It's not fruits and vegetables.");
+      break;
+  }
+    </script> --><!-- 
+    <script>
+      let score = 80;
+  switch (score){
+    case 90:    
+    case 91:
+    case 92:
+    case 93:
+    case 94:
+    case 95:
+    case 96:
+    case 97:
+    case 98:
+    case 99:
+      console.log("A++ 학점");
+      break;
+    default:
+      break;
+  }
+    </script> -->
+<!--     <script>
+      //사용자로부터 입력받는 부분
+      var rank = window.prompt("직급을 입력하세요.1-부장,2-차장,3-과장,4-대리,5-사원");
+      //switch문은 정형화, 한정된 데이터에 가독성을 좋게 하고자 한다면 switch문을 
+      //쓸 것을 고려해도 좋다.
+      switch(rank){
+          case "1" : document.write("<p>부장의 급여는 <strong>700만원</strong>입니다.");
+              break; //break문이 없으면 입력한 부분아래에 있는 내용을 다 출력함.
+          case "2" : document.write("<p>차장의 급여는 <strong>600만원</strong>입니다.");
+              break;
+          case "3" : document.write("<p>과장의 급여는 <strong>500만원</strong>입니다.");
+              break;
+          case "4" : document.write("<p>대리의 급여는 <strong>350만원</strong>입니다.");
+              break;
+          case "5" : document.write("<p>사원의 급여는 <strong>200만원</strong>입니다.");
+              break;
+          //default는 옵션
+          default : alert("잘못 입력하셨습니다.");
+      }
+  </script>   -->
+<!--   <script>
+    //사용자로부터 값을 입력
+    var userID = window.prompt("사용자 아이디를 입력하세요.");
+    //값 비교하기 위한 코드
+    if(userID == "KB"){
+        alert(userID + "님 환영합니다.");
+    }
+    else {
+        alert("아이디가 틀렸습니다.확인해 주세요.");
+    }
+</script> -->
+<!-- <script>
+  //사용자로부터 입력받는 부분
+  var userID = window.prompt("아이디를 입력하세요.");
+  var userPW = window.prompt("패스워드를 입력하세요.");
+  //값 비교 
+  if(userID == "KB" && userPW == "0209"){  //연산자 우선순위 == 는 동등, && AND
+      alert(userID + "님이 로그인 하셨습니다.");
+  }
+  else if(userID == "KB"){
+      alert("패스워드가 잘못 입력되었습니다.");
+  }
+  else {
+      alert("아이디가 잘못 입력되었습니다.");
+  }
+</script> -->
+<!-- <script>
+  //사용자로부터 입력받는 부분
+  var value = window.prompt("행운의 번호를 고르세요.");
+  
+  //값 비교 
+  if(value == "1"){
+      document.write("당첨! 머그컵");
+  }
+  else if(value == "2"){
+      document.write("당첨! 비스포크 냉장고");
+  }        
+  else if(value == "3"){
+      document.write("당첨! 3D 펜");
+  }
+  else {
+      document.write("꽝!!!!!");
+  }
+</script> -->
+<!-- <script>
+  let x=Math.floor(Math.ramdom()*100);
+  document.write(x);
+  alert("0~10 사이의 숫자 x가 생성되었습니다.");
+  let count=1;
+  let guess=100;
+  while(guess!==x){  
+  alert(count+"번째 시도");
+  guess = parseInt(prompt("1~ 99까지의 숫자를 입력하세요"));
+  switch (guess){
+    case guess === x:
+      alert("정답입니다!"+count+"회 만에 맞췄습니다.")
+      break;
+    case guess<x:
+      alert("x는 더 큰 수 입니다.")
+      break;
+    case guess>x:
+      alert("x는 더 작은 수 입니다.") 
+      break;
+    }
+  }
+</script>  -->
+  <script src="guess_random_num.js"></script>
+</body>
+</html>
