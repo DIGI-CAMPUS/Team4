@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제이쿼리 연습</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      //id는 #, class는 .으로 선택자 지정
+      //요서 선택자는 태그지정
+      //동시 선태가능 $("#kb,h1") 또는 ("h1 .#kb") h1 중에서 id값이 같은 것만 지정
+      $(function () {
+        $("#22").parent().css("border", "4px solid #f00");
+      });
+    </script>
+  </head>
+  <body>
+    <h1>인접 관계 선택자</h1>
+    <ul id="kb">
+      <li>리스트1</li>
+      <ul>
+        <li id="22">리스트22</li>
+        <li>리스트22-1</li>
+      </ul>
+      <li>리스트2</li>
+      <li>리스트3</li>
+    </ul>
+  </body>
+</html>
