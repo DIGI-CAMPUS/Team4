@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제이쿼리 연습</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      //id는 #, class는 .으로 선택자 지정
+      //요서 선택자는 태그지정
+      //동시 선태가능 $("#kb,h1") 또는 ("h1 .#kb") h1 중에서 id값이 같은 것만 지정
+      $(function () {
+        $("#kb")
+          .css("background-color", "#ff0") //id 선택자
+          .css("border", "4px solid #f00"); //체이닝 기법 : 선택한 요소에 메서드를 연속해서 사용
+      });
+      $(function () {
+        $("a")
+          .attr("href", "https://www.naver.com")
+          .attr("target", "blank")
+          .css("font-size", "50px");
+      });
+    </script>
+  </head>
+  <body>
+    <h1>제이쿼리</h1>
+    <h2 id="kb">선택자</h2>
+    <h3><a href>직접 선택자</a></h3>
+  </body>
+</html>

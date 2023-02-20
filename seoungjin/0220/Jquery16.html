@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제이쿼리 연습</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+      $(function () {
+        $("#btn1").data({ text: "javascript" }).on({
+          mouseover: over,
+          mouseout: out,
+        });
+
+        $("#btn2").data({ text: "welcome!" }).on({
+          "mouseover focus": over,
+          "mouseout blur": out,
+        });
+
+        function over() {
+          $(".txt").text($(this).data("text")));
+        }
+        function out() {
+          $(".txt").text("");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <p><button id="btn1">버튼1</button></p>
+    <p><button id="btn2">버튼2</button></p>
+    <p class="txt"></p>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".btn").click(function() {
+          $(".popup_bg").css({"display" : "block"})
+        })
+​
+        $(".popup_bg").click(function() {
+            $(this).css({"display" : "none"});
+        })
+​
+      })
+    </script>
+    <style>
+        .btn {
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            display: flex;
+            justify-content: center; /*가로*/
+            align-items: center; /*세로*/
+            background-color: red;
+            color: aliceblue;
+            text-align: center;
+            cursor: pointer;
+        }
+        .popup_bg{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .popup {
+            position: absolute;
+            left:calc(50% - 150px);
+            top:calc(50% - 250px);
+            width: 300px;
+            height: 500px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">팝업</div>
+    <div class="popup_bg">
+        <div class="popup"></div>
+    </div>
+</body>
+</html>
+////////////////////////////////////////////////////////////////////////////////////////////////
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(document).ready(function() {
+        $(".btn").hover(function() {
+            // $(".btn").css({"background" : "pink"})
+          $(this).css({
+            "background" : "green",
+            "color" : "white",
+            "transition" : "0.7s"
+          })
+        }, function() {
+          $(this).css({
+            "background" : "yellow",
+            "color" : "black",
+          })
+        })
+​
+        $(".img1 > img").click(function () {
+          $(this).attr("src", "img/2.png")
+        })
+​
+      });
+    </script>
+    <style>
+        .btn{
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            background-color: pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">메뉴</div>
+    <div class="btn">메뉴</div>
+    <div class="btn">메뉴</div>
+    <div class="btn">메뉴</div>
+    <div class="btn">메뉴</div>
+    <div class="img1">
+        <img src="img/1.png" alt="" srcset="" width="500">
+    </div>
+</body>
+</html>
