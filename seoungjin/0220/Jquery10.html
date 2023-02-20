@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제이쿼리 연습</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+      $(function () {
+        $(document).ready(function () {
+          var h1 = $("img1").height();
+          console.log("ready:", h1); //ready 값
+        });
+        $(window).load(function () {
+          var h2 = $(".img").height();
+          console.log("load:", h2);
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <p>
+      <img src ="https://place-hold.it/300x300" class ="img1">버튼1</img>
+    </p>
+    <p>내용</p>
+    <button>버튼2</button>
+    <p>내용2</p>
+  </body>
+
+  </html>

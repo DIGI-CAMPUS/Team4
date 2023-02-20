@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제이쿼리 연습</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+      $(function () {
+        $(document).on("keydown", keyEventFnc);
+        function keyEventFnc(e) {
+          var direct = "";
+
+          switch (e.keyCode) {
+            //값1:행위
+            case 37:
+              direct = "←";
+              break;
+            case 38:
+              direct = "위쪽키누르셨네요";
+              break;
+            case 39:
+              direct = "오른쪽키누르셨네요";
+              break;
+            case 40:
+              direct = "아래쪽키누르셨네요";
+              break;
+          }
+          //만약 direct에 값이 들어가 있다면 user_id값을 value값으로 변경
+          if (direct) $("#user_id").val(direct);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <p><input type="text" name="user_id" id="user_id" /></p>
+  </body>
+</html>
