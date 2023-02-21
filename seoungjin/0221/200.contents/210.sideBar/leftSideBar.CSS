@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Russo+One&display=swap");
+
+#leftSideBar {
+  position: fixed;
+  background-color: #f3f5f7;
+  width: 20%;
+  height: 100%;
+}
+#scrollBtn {
+  /* margin: 0px 0px 0px 50px; */
+  padding: 10px 20px 10px 0px;
+  display: flex;
+  justify-content: center;
+  background-color: #ebeef0;
+}
+.btn {
+  width: 80px;
+  height: 25px;
+  margin-right: 10px;
+  background-color: rgb(240, 212, 194, 30%);
+  background-color: white;
+  border: 2px;
+  box-shadow: 1px 1px 3px 1px rgb(239, 151, 88);
+}
+#search {
+  height: 30px;
+  padding: 5px 20px 20px 30px;
+  background-color: #ebeef0;
+  display: flex;
+  align-items: center;
+}
+#search IMG {
+  background-color: white;
+}
+#searchBar {
+  left: 50px;
+  height: 30px;
+  border: none;
+}
+#a {
+  width: 50px;
+  height: 30px;
+  background: url(image\user.png);
+}
+
+#leftSideBarHeader {
+  padding: 30px 0px 0px 30px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: bolder;
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: rgb(250, 62, 5);
+}
+#leftSideBarMenu {
+  padding: 20px 20px 20px 30px;
+  font-family: "Do Hyeon", sans-serif;
+  font-family: "Russo One", sans-serif;
+}
+#leftSideBarMenu > li {
+  list-style: none; /*리스트 앞에 쩜 있는거 삭제 */
+  /* height: 50px; /* 이걸 설정안하면 서브메뉴 가 나올때다른 메인메뉴가 밀림 */
+  font-size: 15px;
+  font-weight: bolder;
+  font-style: italic;
+  border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+  display: block;
+  box-sizing: inherit;
+  padding: 10px 10px 10px 10px;
+
+  /*   line-height: 110px; /* 단락 간격 조절  이걸주면 서브메뉴가 나올때
+상위메뉴[gpt활용,갤러리,빈게시판이 아래로 밀림*/
+}
+#leftSideBarMenu > li:hover {
+  cursor: pointer;
+}
+#leftSideBarMenu > li > ul {
+  list-style: square;
+  font-size: 15px;
+  font-weight: bolder;
+  font-style: italic;
+  display: block;
+}
+#leftSideBarMenu > li > ul > div {
+  display: none; /* 기초값 서브메뉴 보이지 않게 */
+  font-size: 12px;
+  font-weight: normal;
+  text-indent: 0.4em; /* 들여쓰기 */
+  width: 120px; /* hover시 백그라운드 색상이 넘쳐서 너비를 줄임 */
+  left: 120px;
+  line-height: 50px; /* 단락 간격 조절 */
+}
+#leftSideBarMenu li ul div li:hover a {
+  background-color: #000;
+  color: #f0e517;
+}

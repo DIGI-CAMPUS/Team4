@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cherry PAPA</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="999.images/cherry.png"
+    />
+    <link rel="stylesheet" href="index.CSS" />
+    <script src="jquery-latest.min.js"></script>
+    <script src="JavaScript.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="headerText">Beutiful Color Cherry</div>
+    </header>
+    <div id="contents">
+      <aside id="leftSideBar">
+        <div id="scrollBtn">
+          <button class="btn" onclick="sTo()">To Top</button>
+          <button class="btn" onclick="sBy()">Scroll</button>
+        </div>
+        <div id="search">
+          <img src="999.images/search.png" alt="돋보기" height="28px" />
+          <input type="text" id="searchBar" placeholder="SEARCH" />
+        </div>
+        <div id="leftSideBarHeader">Menu</div>
+        <div>
+          <ul id="leftSideBarMenu">
+            <li>
+              <ul>
+                <a href="javascript:doDisplaystudySubMenu();">스터디</a>
+                <div id="studySubMenu">
+                  <li><a href="#">HTML, CSS</a></li>
+                  <li><a href="#">JavaScript</a></li>
+                  <li><a href="#">Java</a></li>
+                  <li><a href="#">SQL</a></li>
+                </div>
+              </ul>
+            </li>
+            <br />
+            <li>
+              <a href="https://openai.com/blog/chatgpt/" target="_blank"
+                >CHAT GPT</a
+              >
+            </li>
+            <br />
+            <li><a href="https://openai.com/dall-e-2/">DALL-E-2</a></li>
+            <br />
+            <li>
+              <a
+                href="200.contents/210.sideBar/notice/notice.html"
+                target="_blank"
+                >게시판</a
+              >
+            </li>
+            <br />
+          </ul>
+        </div>
+      </aside>
+      <main>
+        <div id="topmenu">
+          <nav id="nav">
+            <ul>
+              <li id="Welcome"><a href="index.html">Welcome!</a></li>
+              <li>
+                <a href="#">자기소개</a>
+                <ul id="aaaa">
+                  <li><a href="#">어떤 사람??</a></li>
+                  <li><a href="#">뭐하는 사람??</a></li>
+                  <li>
+                    <a href="#">취미</a>
+                    <ul>
+                      <li><a href="#">여행</a></li>
+                      <li><a href="#">OTT 시청</a></li>
+                      <li><a href="#">명상</a></li>
+                      <li><a href="#">산책</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="left-sidebar.html">DIGI CAMPUS</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div id="info">
+          <div id="infotop"><h4>made by Yoo</h4></div>
+        </div>
+        <section id="introduce">
+          <div>
+            <h1>Hi!! nice to meet you. how do you do?!</h1>
+            <br />
+            With the skills and passion that I have accumulated through various
+            experiences and efforts, I am looking for an opportunity to develop
+            and grow in the field of IT development. I aim to become an IT
+            professional who contributes to the organization by proposing new
+            technologies and ideas while growing together in a mutually
+            supportive work environment. Also, I am never afraid of taking on
+            new challenges. The process of acquiring new skills and growing with
+            the help of seniors and juniors while bearing the weight of past
+            experiences is very meaningful to me.<br />
+            <br />
+            <br />
+            <button id="loginBtn" onclick="openLogInWindow()">Log In</button>
+            <button id="loginBtn" onclick="openjoinWindow()">Join Us!</button>
+          </div>
+          <div>
+            <img src="999.images/robot.jpg" alt="메인사진" width="500px" />
+          </div>
+        </section>
+        <hr id="underline" />
+        <div id="gallerySection">
+          <h3>감상하기</h3>
+          <br />
+          <div id="galleryBtnListBox">
+            <ul id="galleryBtnList">
+              <li class="galleryBtn">
+                <a href="#" onclick="changeImg('dog'); return false;">아콩!</a>
+              </li>
+              <li class="galleryBtn">
+                <a href="#" onclick="changeImg('cat'); return false;">고양이</a>
+              </li>
+              <li class="galleryBtn">
+                <a href="#" onclick="changeImg('lion'); return false;">사자</a>
+              </li>
+              <li class="galleryBtn">
+                <a href="#" onclick="changeImg('tiger'); return false;"
+                  >호랑이</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div id="galleryBox">
+            <img id="galleryImg" src = 999.images/panorama.jpg alt="사진" >
+          </div>
+          <hr id="underline" />
+        </div>
+        <div id="section">
+          <h3>무엇을 원하십니까?</h3>
+          <div class="box">
+            <div>
+              <img src="999.images\connection.png" alt="연결이미지" />
+              <a href="#" onclick="alert('페이지준비중입니다'); return false;"
+                >연결을 원하십니까? 클릭하세요.</a
+              >
+            </div>
+            <div></div>
+          </div>
+          <div class="box">
+            <div>
+              <img src="999.images\rocket.png" alt="로켓이미지" />
+              <a href="#" onclick="alert('배송불가 지역입니다.'); return false;"
+                >로켓배송을 원하십니까?클릭하세요.</a
+              >
+            </div>
+            <div></div>
+          </div>
+          <div class="box">
+            <div>
+              <img src="999.images\saveMoney.png" alt="저축이미지" />
+              <a
+                href="#"
+                onclick="alert('괜찮습니다 저축하세요'); return false;"
+                >기부를 하시겠습니까?클릭하세요.</a
+              >
+            </div>
+            <div></div>
+          </div>
+          <div class="box">
+            <div>
+              <img src="999.images\settings.png" alt="셋팅이미지" />
+              <a
+                href="#"
+                onclick="alert('셋팅이 완료되었습니다.'); return false;"
+                >셋팅을 원하십니까?클릭하세요.</a
+              >
+            </div>
+            <div></div>
+          </div>
+          <hr id="underline" />
+        </div>
+      </main>
+      <aside id="rightSideBar">
+        <input type="checkBox" id="rightMenuIcon" />
+        <label for="rightMenuIcon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <div class="rightSideBarMenu">
+          <div id="mouseXY">
+            <h1>커서 위치</h1>
+            <p>X : <span class="posX">0</span>px</p>
+            <p>Y : <span class="posY">0</span>px</p>
+          </div>
+          <div id="todayDoit">
+            <span>오늘의 할일</span><br />
+            <input type="checkbox" name="today" />코딩공부</input>
+            <input type="checkbox" name="today" />운동</input>
+            <input type="checkbox" name="today" />쇼핑</input>
+            <input type="checkbox" name="today" />알바</input>
+          </div>
+          <ul style="list-style: none">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
