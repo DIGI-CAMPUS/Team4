@@ -1,0 +1,47 @@
+/* 탑메뉴 바 설정 */
+#topmenu {
+  width: 80%;
+  height: 10%;
+  display: flex;
+  position: absolute;
+  left: 350px;
+  font-size: 0.9em;
+}
+#nav ul {
+  list-style: none; /*리스트 앞에 쩜 있는거 삭제 */
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+}
+#nav ul li {
+  line-height: 50px;
+  padding-left: 10px;
+}
+#nav ul li a {
+  font-weight: 800;
+  letter-spacing: 0.025em;
+  color: #696969;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 0.5em 1em 0.5em 1em;
+}
+#nav ul li:hover > a {
+  background: #b9b8b8;
+}
+#nav ul li#Welcome > a {
+  /* welcome 글자 default 설정 */
+  background: #444;
+  color: #fff;
+}
+#nav ul:hover {
+  background-color: white; /* 메인 메뉴 항목 위로 오버하면 서브 메뉴 표시 */
+}
+#nav ul > li:hover > ul {
+  display: block; /* 메인 메뉴 항목 위로 오버하면 서브 메뉴 표시 */
+}
+#nav ul li > ul {
+  display: none; /* 서브 메뉴 처음에는 화면에 안 보이게 */
+  position: absolute; /* 서브 메뉴 포지셔닝 */
+  left: 20px;
+  margin: 0;
+}
