@@ -1,0 +1,18 @@
+jQuery 
+download or CDN(src. only can use as online)
+link)
+https://jquery.com/download/
+https://cdnjs.com/libraries/jquery
+
+jquery 사용 시 $마크 사용
+ex)
+    <script>
+    $(function(){
+      $("*").css("border","1px solid blue"); //전체 선택자. *부분에 선택자 입력.
+    });
+  </script>
+id #, class . 
+요소 선택자는 태그 지정. 동시선택 가능. , 또는 공백.
+
+
+
