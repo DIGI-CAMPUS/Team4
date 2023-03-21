@@ -58,3 +58,7 @@ INSERT INTO EMP VALUES
 
 INSERT INTO EMP VALUES
 (7521,'WARD','SALESMAN',7698,to_date('22-2-1981','dd-mm-yyyy'),1250,500,30);
+
+
+SELECT to_char(sysdate, 'yyyy/mm/dd hh24')
+FROM dual;
